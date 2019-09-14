@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #232323; position: -webkit-sticky; position: sticky; top: 0px; z-index: 10;">
+
+  <a href="/">
+    <span class="navbar-brand"
+      style="font-size: 2rem; border: 0px solid var(--white); color: var(--white)">Tendoledu</span>
+  </a>
+
+</nav>
+
+
+
+
+<div style="margin-top: 25px">
+  <div style="padding: 25px;" class="shadow col-md-6 m-auto">
+    <h1 class="text-center mb-3">
+      <i class="fas fa-user-plus"></i> Register
+    </h1>
+    <% include ./partials/messages %>
+    <form action="/users/register" method="POST">
+      <!-- Name Input         -->
+      <div class="form-group">
+        <label for="name">Full Name :</label>
+        <input type="name" id="name" name="name" class="form-control" placeholder="Enter Full Name"
+          value="<%= typeof name != 'undefined' ? name : '' %>" />
+      </div>
+      <!-- Selection Input -->
+      <div class="form-group col-md-6">
+        <label for="workAs">Want To Work As A :</label>
+        <select id="workAs" name="workAs" class="form-control" aria-placeholder="Choose one work">
+          <option value="Graphic Designer">Graphic Designer</option>
+          <option value="Marketing Content Creator">Marketing Content Creator</option>
+        </select>
+      </div>
+      <!-- Email Selection -->
+      <div class="form-group">
+        <label for="email">Email Address :</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email Address"
+          value="<%= typeof email != 'undefined' ? email : '' %>" />
+      </div>
+      <!-- Password Selection -->
+      <div class="form-group">
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Create Password"
+          value="<%= typeof password != 'undefined' ? password : '' %>" />
+      </div>
+      <!-- Confirm Password Input -->
+      <div class="form-group">
+        <label for="password2">Confirm Password :</label>
+        <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm Password"
+          value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+      </div>
+
+      <div style="text-align: center">
+        <button type="submit" class="gradient-button" style="width: 17vw; padding: 15px;">
+          <b>Register</b>
+        </button>
+      </div>
+    </form>
+    <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+
+  </div>
+</div>

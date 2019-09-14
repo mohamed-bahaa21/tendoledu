@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #232323; position: -webkit-sticky; position: sticky; top: 0px; z-index: 10;">
+
+  <a href="/">
+    <span class="navbar-brand"
+      style="font-size: 2rem; border: 0px solid var(--white); color: var(--white)">Tendoledu</span>
+  </a>
+</nav>
+
+
+
+<div style="margin-top: 25px">
+  <div style="padding: 25px;" class="shadow col-md-6 m-auto">
+    <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Login</h1>
+    <% include ./partials/messages %>
+    <form action="/users/login" method="POST">
+      <div class="form-group">
+        <label for="email">Email Address :</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your Email Address" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Your Password" />
+      </div>
+      <div style="text-align: center">
+        <button type="submit" class="gradient-button" style="width: 17vw; padding: 15px;">
+          <b>Login</b>
+        </button>
+      </div>
+    </form>
+    <p class="lead mt-4">
+      No Account? <a href="/users/register">Register</a>
+    </p>
+  </div>
+</div>
