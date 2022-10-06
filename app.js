@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 let env = dotenv.config({})
 if (env.error) throw env.error;
-env = dotenvParseVariables(env.parsed);
+
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
