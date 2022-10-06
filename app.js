@@ -19,7 +19,7 @@ const app = express();
 require('./config/passport')(passport)
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://mohammad123:mohammad123@blogdb-fslqm.mongodb.net/test?retryWrites=true/test", {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
 });
 
