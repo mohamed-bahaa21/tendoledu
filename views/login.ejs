@@ -8,28 +8,85 @@
 </nav>
 
 
+<style>
+  #login-container {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100vh;
+  }
 
-<div style="margin-top: 25px">
-  <div style="padding: 25px;" class="shadow col-md-6 m-auto">
-    <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Login</h1>
-    <% include ./partials/messages %>
-    <form action="/users/login" method="POST">
-      <div class="form-group">
-        <label for="email">Email Address :</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Your Email Address" />
+  #login-container-1 {
+    flex-basis: 50%;
+    background: rgb(239, 242, 251);
+  }
+
+  #login-container-2 {
+    flex-basis: 50%;
+    background-image: url("https://ui-cdn.digitalocean.com/registration/46cfde8/static/media/uptimeBg.6567d240d87e0b861454803a4c7f6bd0.svg");
+    background-position: center center;
+    background-color: rgb(245, 249, 255);
+    background-size: cover;
+  }
+</style>
+
+<div id="login-container">
+  <div id="login-container-1">
+    <div>
+      <div style="margin-top: 25px">
+        <div style="padding: 4em 2em; border-radius: 2em;" class="shadow col-md-8 m-auto">
+          <h3 class="mb-3"><i class="fas fa-sign-in-alt"></i> Log in to your account</h3>
+          <br>
+          <% include ./partials/messages %>
+            <form action="/users/login" method="POST">
+              <div class="form-group">
+                <label for="email">Email Address :</label>
+                <input type="email" id="email" name="email" class="form-control"
+                  placeholder="Enter Your Email Address" />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control"
+                  placeholder="Enter Your Password" />
+              </div>
+              <div style="text-align: center">
+                <button type="submit" class="gradient-button" style="width: 75%;">
+                  <b>Login</b>
+                </button>
+              </div>
+            </form>
+            <p class="lead mt-4">
+              No Account? <a href="/users/register">Register</a>
+            </p>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Your Password" />
-      </div>
-      <div style="text-align: center">
-        <button type="submit" class="gradient-button" style="width: 17vw; padding: 15px;">
-          <b>Login</b>
-        </button>
-      </div>
-    </form>
-    <p class="lead mt-4">
-      No Account? <a href="/users/register">Register</a>
-    </p>
+
+    </div>
+  </div>
+
+  <div id="login-container-2">
+    <div style="max-width: 1200px;
+      position: relative;
+      padding: 1em 4em;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: auto;">
+
+      <img src="https://ui-cdn.digitalocean.com/registration/46cfde8/static/media/uptimeLogo.dd7a8f9d9e657333b897.png"
+        style="width: 100%; border: 0;
+              height: auto;
+              max-width: 100%;" />
+
+      <h2 style="color: #fff; font-weight: 500;">Introducing Tendoledu.</h2>
+      <p style="color: #fff;">Don’t miss out on a chance to work on hundreds of startup projects.
+        Build your portfolio and impress your employers</p>
+
+      <div><a href="#" target="_blank" rel="noopener noreferrer"><span>Learn more</span></a></div>
+    </div>
   </div>
 </div>
